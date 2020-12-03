@@ -1,0 +1,23 @@
+{
+    "fileName": "NoInstance.hs",
+    "moduleName": "NoInstance",
+    "errors": [
+        {
+            "message": "The use of \"=\" in \"foo\" requires its operands to have an \"Eq\" instance",
+            "locations": [
+                {
+                    "fromLine": 4,
+                    "toLine": 4,
+                    "fromColumn": 1,
+                    "toColumn": 4
+                },   
+                {
+                    "fromLine": 4,
+                    "toLine": 4,
+                    "fromColumn": 11,
+                    "toColumn": 16
+                }
+            ]
+        }
+    ]
+}
