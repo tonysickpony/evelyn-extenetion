@@ -1,6 +1,6 @@
 {
-	"name": "evelyn-extenetion",
-	"displayName": "Evelyn Extenetion",
+	"name": "haskell-debugging",
+	"displayName": "haskell debugging",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:evelyn-extenetion.helloWorld"
+		"onCommand:haskell-debugging.showHighlight"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "evelyn-extenetion.helloWorld",
-				"title": "Hello World"
+				"command": "haskell-debugging.showHighlight",
+				"title": "Show Highlighting"
 			}
 		]
 	},
