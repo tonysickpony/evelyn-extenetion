@@ -3,7 +3,7 @@
     "moduleName": "NoInstance",
     "errors": [
         {
-            "message": "The use of \"=\" in \"foo\" requires its operands to have an \"Eq\" instance",
+            "message": "The use of \"==\" in \"foo\" requires its operands to have an \"Eq\" instance",
             "locations": [
                 {
                     "fromLine": 3,
@@ -15,7 +15,7 @@
                     "fromLine": 3,
                     "toLine": 3,
                     "fromColumn": 10,
-                    "toColumn": 15
+                    "toColumn": 16
                 }
             ]
         }
