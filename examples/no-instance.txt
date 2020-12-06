@@ -3,18 +3,18 @@
     "moduleName": "NoInstance",
     "errors": [
         {
-            "message": "The use of \"=\" in \"foo\" requires its operands to have an \"Eq\" instance",
+            "message": "The use of \"==\" in \"foo\" requires its operands to have an \"Eq\" instance",
             "locations": [
                 {
-                    "fromLine": 4,
-                    "toLine": 4,
-                    "fromColumn": 1,
-                    "toColumn": 4
+                    "fromLine": 3,
+                    "toLine": 3,
+                    "fromColumn": 0,
+                    "toColumn": 3
                 },   
                 {
-                    "fromLine": 4,
-                    "toLine": 4,
-                    "fromColumn": 11,
+                    "fromLine": 3,
+                    "toLine": 3,
+                    "fromColumn": 10,
                     "toColumn": 16
                 }
             ]
