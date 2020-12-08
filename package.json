@@ -10,7 +10,9 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:haskell-debugging.showHighlight"
+		"onCommand:haskell-debugging.showHighlight",
+		"onCommand:haskell-debugging.startTypeQuestion",
+		"onLanguage:haskell"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -18,6 +20,10 @@
 			{
 				"command": "haskell-debugging.showHighlight",
 				"title": "Show Highlighting"
+			},
+			{
+				"command": "haskell-debugging.startTypeQuestion",
+				"title": "Type Question"
 			}
 		]
 	},
