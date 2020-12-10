@@ -6,6 +6,8 @@ import * as noInstanceJson from './no-instance.json';
 import * as incompatiblilityJson from './incompatiblility.json';
 import * as IncompatibilityNumberJson from './Incompatibility-chooseNumber.json';
 import * as IncompatibilityStringJson from './Incompatibility-chooseString.json';
+import { execFile } from 'child_process';
+const { exec } = require('child_process')
 
 const CHECKINGTYPE = 'checkingType';
 const DOCUMENT = vscode.window.activeTextEditor ? vscode.window.activeTextEditor.document : false;
@@ -84,11 +86,37 @@ export function activate(context: vscode.ExtensionContext) {
 			}      
 			diagnosticsSet.set(uri, diagnostics); 
 		}
+	});
 
-		
+	let runChameleon = vscode.commands.registerCommand('haskell-debugging.runChameleon', () => {
+		const editor = vscode.window.activeTextEditor;
+		if (editor) {
+			const document = editor.document;
+			const filePath = document.fileName;
+			const fileName = filePath.split("\\").pop();
+			
+			//var spawn = require("child_process").spawn,child;
+			//child = spawn("C:\\Users\\Cody\\chameleon-master\\.stack-work\\install\\1afa3193\\bin\\chameleon.exe",['--lib="C:\\Users\\Cody\\chameleon-master"', filePath]);
+			//child.stdout.on("data", (data: string) => {
+			//	console.log("Powershell Data: " + data);
+			//});
+			//child.stderr.on("data", (data: string) => {
+			//	console.log("Powershell Data: " + data);
+			//});
+		//`C:\\Users\\Cody\\chameleon-master\\.stack-work\\install\\1afa3193\\bin\\chameleon.exe`, ['--lib="C:\\Users\\Cody\\chameleon-master"', 'C:\\Users\\Cody\\evelyn-extenetion\\examples\\sumLength.hs'
+			execFile('get-location', [], function (error: any, stdout: string, stderr: any) {
+				if (error) {
+					console.log(error);
+					vscode.window.showErrorMessage("Chameleon errors")
+				}
+				console.log(stdout);
+			});
+
+		}
 
 
 	});
+	context.subscriptions.push(runChameleon);
 	context.subscriptions.push(basicErrors);
 	context.subscriptions.push(selectType);
 	context.subscriptions.push(

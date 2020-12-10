@@ -12,6 +12,8 @@
 	"activationEvents": [
 		"onCommand:haskell-debugging.showHighlight",
 		"onCommand:haskell-debugging.startTypeQuestion",
+		
+		"onCommand:haskell-debugging.runChameleon",
 		"onLanguage:haskell"
 	],
 	"main": "./dist/extension.js",
@@ -24,6 +26,10 @@
 			{
 				"command": "haskell-debugging.startTypeQuestion",
 				"title": "Type Question"
+			},
+			{
+				"command": "haskell-debugging.runChameleon",
+				"title": "Run Chameleon"
 			}
 		]
 	},

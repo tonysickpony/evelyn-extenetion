@@ -1,0 +1,64 @@
+CHRs:
+Primitive.LT:k v0 <=> v0=Primitive.Ordering_[42]
+Primitive.EQ:k v1 <=> v1=Primitive.Ordering_[43]
+Primitive.GT:k v2 <=> v2=Primitive.Ordering_[44]
+Primitive.Eq v4 ==> True
+Primitive.==:a v10 <=> Primitive.Eq v4, v10=v5_[5], v5=v6->v7_[10], v6=v4_[6], v7=v8->v9_[9], v8=v4_[7], v9=Bool_[8]
+Primitive./=:a v16 <=> Primitive.Eq v4, v16=v11_[22], v11=v12->v13_[27], v12=v4_[23], v13=v14->v15_[26], v14=v4_[24], v15=Bool_[25]
+Primitive.Ord v18 ==> Primitive.Eq v18
+Primitive.compare:a(v25) <=> Primitive.Ord v18, v25=v20_[53], v20=v21->v22_[58], v21=v18_[54], v22=v23->v24_[57], v23=v18_[55], v24=Primitive.Ordering_[56]
+Primitive.>=:a v31 <=> Primitive.Ord v18, v31=v26_[63], v26=v27->v28_[68], v27=v18_[64], v28=v29->v30_[67], v29=v18_[65], v30=Bool_[66]
+Primitive.>:a v37 <=> Primitive.Ord v18, v37=v32_[62], v32=v33->v34_[68], v33=v18_[64], v34=v35->v36_[67], v35=v18_[65], v36=Bool_[66]
+Primitive.<=:a v43 <=> Primitive.Ord v18, v43=v38_[61], v38=v39->v40_[68], v39=v18_[64], v40=v41->v42_[67], v41=v18_[65], v42=Bool_[66]
+Primitive.<:a v49 <=> Primitive.Ord v18, v49=v44_[60], v44=v45->v46_[68], v45=v18_[64], v46=v47->v48_[67], v47=v18_[65], v48=Bool_[66]
+Primitive.min:a(v55) <=> Primitive.Ord v18, v55=v50_[74], v50=v51->v52_[79], v51=v18_[75], v52=v53->v54_[78], v53=v18_[76], v54=v18_[77]
+Primitive.max:a(v61) <=> Primitive.Ord v18, v61=v56_[73], v56=v57->v58_[79], v57=v18_[75], v58=v59->v60_[78], v59=v18_[76], v60=v18_[77]
+Primitive.Fractional v63 ==> True
+Primitive.fromRational:a(v67) <=> Primitive.Fractional v63, v67=v64_[446], v64=v65->v66_[449], v65=Primitive.Rational_[447], v66=v63_[448]
+Primitive.Num v69 ==> Primitive.Eq v69, Primitive.Show v69
+Primitive.*:a v77 <=> Primitive.Num v69, v77=v72_[515], v72=v73->v74_[520], v73=v69_[516], v74=v75->v76_[519], v75=v69_[517], v76=v69_[518]
+Primitive.-:a v83 <=> Primitive.Num v69, v83=v78_[514], v78=v79->v80_[520], v79=v69_[516], v80=v81->v82_[519], v81=v69_[517], v82=v69_[518]
+Primitive.+:a v89 <=> Primitive.Num v69, v89=v84_[513], v84=v85->v86_[520], v85=v69_[516], v86=v87->v88_[519], v87=v69_[517], v88=v69_[518]
+Primitive.negate:a(v93) <=> Primitive.Num v69, v93=v90_[524], v90=v91->v92_[527], v91=v69_[525], v92=v69_[526]
+Primitive.signum:a(v97) <=> Primitive.Num v69, v97=v94_[530], v94=v95->v96_[533], v95=v69_[531], v96=v69_[532]
+Primitive.abs:a(v101) <=> Primitive.Num v69, v101=v98_[529], v98=v99->v100_[533], v99=v69_[531], v100=v69_[532]
+Primitive.fromInteger:a(v105) <=> Primitive.Num v69, v105=v102_[536], v102=v103->v104_[539], v103=Integer_[537], v104=v69_[538]
+Primitive.Show v107 ==> True
+Primitive.showsPrec:a(v119) <=> Primitive.Show v107, v119=v108_[545], v108=v109->v110_[550], v109=Int_[546], v110=v111->v112_[549], v111=v107_[547], v112=v113->v116_[570], v113=v114 v115_[565], v114=([])_[565], v115=Char_[564], v116=v117 v118_[565], v117=([])_[565], v118=Char_[564]
+Primitive.show:a(v125) <=> Primitive.Show v107, v125=v120_[552], v120=v121->v122_[555], v121=v107_[553], v122=v123 v124_[565], v123=([])_[565], v124=Char_[564]
+Primitive.showList:a(v137) <=> Primitive.Show v107, v137=v126_[557], v126=v127->v130_[561], v127=v128 v129_[559], v128=([])_[559], v129=v107_[558], v130=v131->v134_[570], v131=v132 v133_[565], v132=([])_[565], v133=Char_[564], v134=v135 v136_[565], v135=([])_[565], v136=Char_[564]
+Primitive.Eq Int <=> True
+Primitive.Eq Integer <=> True
+Primitive.Eq Float <=> True
+Primitive.Eq Double <=> True
+Primitive.Eq Char <=> True
+Primitive.Eq [v158] <=> Primitive.Eq v158
+Primitive.Num Int <=> True
+Primitive.Num Integer <=> True
+Main.sumLengths(v264, v265, v266) <=> x$2:2(v180, v172;<>, <>), v264=v182_[6], v265=v262_[], v266=v263_[], v182=v173->v180_[6], v173=v172_[-1], v181=v180_[6]
+x$2:2(v211, v212, v213) <=> ([]) v195, ([]) v196, x$3:7(v200, v183;v198;<>, <>), v211=v202_[2], v212=v183;v209_[], v213=v210_[], v191=v183_[-1], v191->v202=v197_[-1], v191->v202=v201_[-1], v197=v194->v196_[], v195=v194_[], v201=v199->v200_[], v199=v198_[-1]
+x$3:7(v259, v260, v261) <=> (:) v222, Primitive.+:a v223, Primitive.length:a(v224), Main.sumLengths(v230, v231, v232), Primitive.patternMatchFailed:a(v241), v259=v246_[7], v260=v183;v257_[], v261=v258_[], v214=v183_[-1], v214->v246=v238_[-1], v214->v246=v245_[-1], v238=v221->v236_[], v222=v218->v220->v221_[], v218=v217_[8], v220=v219_[10], v228=v234->v237_[19], v236=v237_[19], v223=v226->v229_[19], v228=v229_[19], v224=v225->v227_[14], v226=v227_[14], v225=v217_[13], v230=v233->v235_[18], v234=v235_[18], v233=v219_[17], v245=v240->v243_[], v240=v239_[-1], v241=v242->v244_[-1], v243=v244_[-1], v242=[Char]_[-1]
+Primitive.toLower:a(t) <=> t=Char->Char_[], v837=Char->Char_[], v838=v1379_[], v839=v1384_[]
+Primitive.toUpper:a(t) <=> t=Char->Char_[], v834=Char->Char_[], v835=v1379_[], v836=v1384_[]
+Primitive.length:a(t) <=> t=[v1383]->Int_[], v831=[v1383]->Int_[], v832=v1379_[], v833=v1387_[]
+Primitive.error:a(t) <=> t=v1390_[], v828=v1390_[], v829=v1382_[], v830=v1381_[]
+Primitive.undefined:a(t) <=> t=v1382_[], v825=v1382_[], v826=v1379_[], v827=v1383_[]
+Primitive.otherwise:a(t) <=> t=Bool_[], v822=Bool_[], v823=v1379_[], v824=v1382_[]
+Primitive.enumFromThenToInt:a(t) <=> t=Int->Int->Int->[Int]_[], v819=Int->Int->Int->[Int]_[], v820=v1379_[], v821=v1390_[]
+Primitive.enumFromToInt:a(t) <=> t=Int->Int->[Int]_[], v816=Int->Int->[Int]_[], v817=v1379_[], v818=v1388_[]
+Primitive.gtInt:a(t) <=> t=Int->Int->Bool_[], v813=Int->Int->Bool_[], v814=v1379_[], v815=v1386_[]
+Primitive.ltInt:a(t) <=> t=Int->Int->Bool_[], v810=Int->Int->Bool_[], v811=v1379_[], v812=v1386_[]
+Primitive.succInt:a(t) <=> Primitive.Eq Int, Primitive.Show Int, Primitive.Num Int, t=Int->Int_[], v807=Int->Int_[], v808=v1407_[], v809=v1406_[]
+Primitive.&&:a t <=> t=Bool->Bool->Bool_[], v804=Bool->Bool->Bool_[], v805=v1379_[], v806=v1386_[]
+Primitive.not:a(t) <=> t=Bool->Bool_[], v801=Bool->Bool_[], v802=v1379_[], v803=v1384_[]
+Primitive.map:a(t) <=> t=(v1386->v1382)->[v1386]->[v1382]_[], v798=(v1386->v1382)->[v1386]->[v1382]_[], v799=v1379_[], v800=v1394_[]
+Primitive.id:a(t) <=> t=v1382->v1382_[], v795=v1382->v1382_[], v796=v1379_[], v797=v1385_[]
+Primitive.uninitialisedField:a(t) <=> t=[Char]->v1386_[], v792=[Char]->v1386_[], v793=v1382_[], v794=v1381_[]
+Primitive.patternMatchFailed:a(t) <=> t=[Char]->v1386_[], v789=[Char]->v1386_[], v790=v1382_[], v791=v1381_[]
+Primitive.undefinedMethod:a(t) <=> t=[Char]->v1386_[], v786=[Char]->v1386_[], v787=v1382_[], v788=v1381_[]
+Primitive.noSuchField:a(t) <=> t=[Char]->v1386_[], v783=[Char]->v1386_[], v784=v1382_[], v785=v1381_[]
+
+Inference Goals:
+InfGoal Main.sumLengths, tlv: (v169, v170, v171), Main.sumLengths(v169, v170, v171)
+InfGoal x$2, tlv: (v174, v175, v176), x$2:2(v174, v175, v176)
+InfGoal x$3, tlv: (v177, v178, v179), x$3:7(v177, v178, v179)
