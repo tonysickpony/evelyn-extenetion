@@ -104,13 +104,22 @@ export function activate(context: vscode.ExtensionContext) {
 			//	console.log("Powershell Data: " + data);
 			//});
 		//`C:\\Users\\Cody\\chameleon-master\\.stack-work\\install\\1afa3193\\bin\\chameleon.exe`, ['--lib="C:\\Users\\Cody\\chameleon-master"', 'C:\\Users\\Cody\\evelyn-extenetion\\examples\\sumLength.hs'
-			execFile('get-location', [], function (error: any, stdout: string, stderr: any) {
-				if (error) {
-					console.log(error);
-					vscode.window.showErrorMessage("Chameleon errors")
-				}
-				console.log(stdout);
-			});
+		exec('c:\\Users\\sfuu0016\\Projects\\academic\\chameleon\\.stack-work\\install\\a88786fe\\bin\\chameleon.exe'
+				+ ' --lib=c:\\Users\\sfuu0016\\Projects\\academic\\chameleon' 
+				+ ' examples\\sumLength.hs',  
+			{shell: "powershell.exe", cwd: 'C:\\Users\\sfuu0016\\Projects\\academic\\evelyn-extenetion'},
+			function(err: any, stdout: string) {
+			console.log(err)
+			console.log(stdout)
+		});	
+				
+		// execFile('get-location', [], function (error: any, stdout: string, stderr: any) {
+		// 		if (error) {
+		// 			console.log(error);
+		// 			vscode.window.showErrorMessage("Chameleon errors")
+		// 		}
+		// 		console.log(stdout);
+		// 	});
 
 		}
 
